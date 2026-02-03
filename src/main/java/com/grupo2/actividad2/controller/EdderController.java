@@ -19,5 +19,9 @@ public class EdderController {
         model.addAttribute("vehiculo", vehiculo);
         return "EdderView";
     }
+    @GetMapping("/infoedder")
+    public String infoedder( ) {
 
+        return "EdderDatosView";
+    }
 }
