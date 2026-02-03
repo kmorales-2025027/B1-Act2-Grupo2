@@ -5,6 +5,14 @@
     <title>Vehículos</title>
 
     <style>
+        .nav {
+            margin-bottom: 30px;
+        }
+        .nav a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
         body {
             font-family: Arial, sans-serif;
         }
@@ -23,21 +31,23 @@
             margin-bottom: 10px;
             font-weight: bold;
         }
+        img {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
+<div class="nav">
+    <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
+</div>
 
 <h1>Listado de Vehículos</h1>
-
-<!-- Mensaje dinámico -->
 <p class="mensaje" th:text="${mensaje}">Listado de vehículos</p>
-
-<!-- Mostrar total de vehículos -->
 <p>Total de vehículos registrados:
     <span th:text="${vehiculos.size()}">0</span>
 </p>
-
-<!-- Tabla solo si hay vehículos -->
 <table border="1" th:if="${vehiculos != null and !vehiculos.isEmpty()}">
     <thead>
     <tr>
@@ -46,6 +56,7 @@
         <th>Modelo</th>
         <th>Año</th>
         <th>Color</th>
+        <th>Imagen</th>
     </tr>
     </thead>
     <tbody>
@@ -55,19 +66,11 @@
         <td th:text="${v.modelo}"></td>
         <td th:text="${v.anio}"></td>
         <td th:text="${v.color}"></td>
+        <td><img src="https://cdn.myportfolio.com/f35974dc-d103-4b19-bf74-f1525b42a4e7/ff779d6d-5d60-4b69-9717-98ce372a75ad_rw_3840.jpg?h=64933660e6498cb557f8ccfe8799de63" alt="Civic black"></td>
     </tr>
     </tbody>
 </table>
 
-<!-- Mensaje cuando no hay datos -->
-<p th:if="${vehiculos == null or vehiculos.isEmpty()}">
-    No hay vehículos registrados.
-</p>
-
 <br>
-
-<!-- Botón de navegación -->
-<a href="/" >Volver al inicio</a>
-
 </body>
 </html>

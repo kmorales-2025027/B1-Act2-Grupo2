@@ -1,4 +1,4 @@
-package com.grupo2.actividad2grupo2.controller;
+package com.grupo2.actividad2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +9,8 @@ public class WebController {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("titulo", "Bienvenido a Motos Pro");
-        model.addAttribute("descripcion", "La mejor selección de motos del país.");
+        model.addAttribute("titulo", "Bienvenido a Concesionario Pro");
+        model.addAttribute("descripcion", "La mejor selección de vehículos del país.");
         return "index";
     }
 

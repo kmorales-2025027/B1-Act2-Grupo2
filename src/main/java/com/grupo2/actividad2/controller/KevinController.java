@@ -12,6 +12,6 @@ public class KevinController {
         Vehiculo vehiculo = new Vehiculo("P 246 JDT", "Honda", "Civic Si", 1991, "Rojo");
 
         model.addAttribute("vehiculo", vehiculo);
-        return "KevinView"; //En este caso, la vista se llama perfil.html
+        return "KevinView";
     }
 }
