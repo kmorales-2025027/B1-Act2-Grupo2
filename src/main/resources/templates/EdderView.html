@@ -2,9 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Pagina Edder</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px; font-weight: bold; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #e74c3c; text-decoration: none; font-weight: bold; }
+        p { text-indent: 80px; }
+        img { width: 600px; height: 400px; object-fit: contain; }
+    </style>
 </head>
 <body>
+<div class="nav">
+    <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
+</div>
 <h1>Edder Gonzalez</h1>
+<img src="https://cdn.dealeraccelerate.com/miami/1/284/12275/1920x1440/2017-audi-r8" alt="Audi R8">
 <p>Marca: <span th:text="${vehiculo.marca}">Marca</span></p>
 <p>Modelo: <span th:text="${vehiculo.modelo}">Modelo</span></p>
 <p>Anio: <span th:text="${vehiculo.anio}">Anio</span></p>

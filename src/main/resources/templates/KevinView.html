@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Kevin Morales</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px; font-weight: bold; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #e74c3c; text-decoration: none; font-weight: bold; }
+        p { text-indent: 80px; }
+        img { width: 600px; height: 400px; object-fit: contain; }
+    </style>
 </head>
 <body>
-    <h1>Vehiculo de Kevin Morales</h1>
-        <p>Marca del Vehiculo: <span th:text="${vehiculo.marca}">Marca</span></p>
+    <div class="nav">
+        <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
+    </div>
+
+    <h1>Vehículo de Kevin Morales</h1>
+    <img src="https://uploads.builtforbackroads.com/uploads/2022/09/2022.09.19-HONDA-CIVIC-1991_4.jpg" alt="Civic Si">
+        <p>Marca del Vehículo: <span th:text="${vehiculo.marca}">Marca</span></p>
         <p>Modelo: <span th:text="${vehiculo.modelo}">Modelo</span></p>
-        <p>Anio: <span th:text="${vehiculo.anio}">XXXX</span></p>
+        <p>Año: <span th:text="${vehiculo.anio}">XXXX</span></p>
         <p>Color: <span th:text="${vehiculo.color}">Color</span></p>
         <p>Placa: <span th:text="${vehiculo.placa}">P XXX ABC</span></p>
 </body>
