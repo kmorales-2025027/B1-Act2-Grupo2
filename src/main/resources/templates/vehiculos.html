@@ -5,8 +5,6 @@
     <title>Vehículos</title>
 
     <style>
-<<<<<<< HEAD
-=======
         .nav {
             margin-bottom: 30px;
         }
@@ -15,7 +13,6 @@
             text-decoration: none;
             font-weight: bold;
         }
->>>>>>> 908d28708cbaea1857b93eb4f897b7547e2eea25
         body {
             font-family: Arial, sans-serif;
         }
@@ -34,23 +31,6 @@
             margin-bottom: 10px;
             font-weight: bold;
         }
-<<<<<<< HEAD
-    </style>
-</head>
-<body>
-
-<h1>Listado de Vehículos</h1>
-
-<!-- Mensaje dinámico -->
-<p class="mensaje" th:text="${mensaje}">Listado de vehículos</p>
-
-<!-- Mostrar total de vehículos -->
-<p>Total de vehículos registrados:
-    <span th:text="${vehiculos.size()}">0</span>
-</p>
-
-<!-- Tabla solo si hay vehículos -->
-=======
         img {
             width: 600px;
             height: 400px;
@@ -59,58 +39,45 @@
     </style>
 </head>
 <body>
+
 <div class="nav">
     <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
 </div>
 
 <h1>Listado de Vehículos</h1>
+
 <p class="mensaje" th:text="${mensaje}">Listado de vehículos</p>
+
 <p>Total de vehículos registrados:
     <span th:text="${vehiculos.size()}">0</span>
 </p>
->>>>>>> 908d28708cbaea1857b93eb4f897b7547e2eea25
+
 <table border="1" th:if="${vehiculos != null and !vehiculos.isEmpty()}">
     <thead>
-    <tr>
-        <th>Placa</th>
-        <th>Marca</th>
-        <th>Modelo</th>
-        <th>Año</th>
-        <th>Color</th>
-<<<<<<< HEAD
-=======
-        <th>Imagen</th>
->>>>>>> 908d28708cbaea1857b93eb4f897b7547e2eea25
-    </tr>
+        <tr>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Color</th>
+            <th>Imagen</th>
+        </tr>
     </thead>
     <tbody>
-    <tr th:each="v : ${vehiculos}">
-        <td th:text="${v.placa}"></td>
-        <td th:text="${v.marca}"></td>
-        <td th:text="${v.modelo}"></td>
-        <td th:text="${v.anio}"></td>
-        <td th:text="${v.color}"></td>
-<<<<<<< HEAD
-=======
-        <td><img src="https://cdn.myportfolio.com/f35974dc-d103-4b19-bf74-f1525b42a4e7/ff779d6d-5d60-4b69-9717-98ce372a75ad_rw_3840.jpg?h=64933660e6498cb557f8ccfe8799de63" alt="Civic black"></td>
->>>>>>> 908d28708cbaea1857b93eb4f897b7547e2eea25
-    </tr>
+        <tr th:each="v : ${vehiculos}">
+            <td th:text="${v.placa}"></td>
+            <td th:text="${v.marca}"></td>
+            <td th:text="${v.modelo}"></td>
+            <td th:text="${v.anio}"></td>
+            <td th:text="${v.color}"></td>
+            <td>
+                <img src="https://www.youtube.com/watch?v=4Z04KFPrDoc" alt="Civic black">
+            </td>
+        </tr>
     </tbody>
 </table>
 
-<<<<<<< HEAD
-<!-- Mensaje cuando no hay datos -->
-<p th:if="${vehiculos == null or vehiculos.isEmpty()}">
-    No hay vehículos registrados.
-</p>
-
 <br>
 
-<!-- Botón de navegación -->
-<a href="/" >Volver al inicio</a>
-
-=======
-<br>
->>>>>>> 908d28708cbaea1857b93eb4f897b7547e2eea25
 </body>
 </html>
