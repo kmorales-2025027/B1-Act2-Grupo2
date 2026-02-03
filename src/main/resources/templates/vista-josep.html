@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vista de Vehículos</title>
+</head>
+<body>
+
+    <h1>Vista de Vehículos</h1>
+
+    <h2>Información del Vehículo</h2>
+
+    <p>
+        <strong>Marca:</strong>
+        <span th:text="${vehiculo.marca}">Marca</span>
+    </p>
+
+    <p>
+        <strong>Modelo:</strong>
+        <span th:text="${vehiculo.modelo}">Modelo</span>
+    </p>
+
+    <p>
+        <strong>Año:</strong>
+        <span th:text="${vehiculo.anio}">Año</span>
+    </p>
+
+    <hr>
+
+    <h2>Datos del Programador</h2>
+
+    <!-- Botón / link para ir a datos personales -->
+    <a href="/datosPersonales">
+        <button>Ver datos del programador</button>
+    </a>
+
+</body>
+</html>
