@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Vehículos</title>
+    <meta charset="UTF-8">
+    <title>Vehículos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .mensaje {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
 <h1>Listado de Vehículos</h1>
 
-<table border="1">
-  <thead>
-  <tr>
-    <th>Placa</th>
-    <th>Marca</th>
-    <th>Modelo</th>
-    <th>Año</th>
-    <th>Color</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="v : ${vehiculos}">
-    <td th:text="${v.placa}"></td>
-    <td th:text="${v.marca}"></td>
-    <td th:text="${v.modelo}"></td>
-    <td th:text="${v.anio}"></td>
-    <td th:text="${v.color}"></td>
-  </tr>
-  </tbody>
+<!-- Mensaje dinámico -->
+<p class="mensaje" th:text="${mensaje}">Listado de vehículos</p>
+
+<!-- Mostrar total de vehículos -->
+<p>Total de vehículos registrados:
+    <span th:text="${vehiculos.size()}">0</span>
+</p>
+
+<!-- Tabla solo si hay vehículos -->
+<table border="1" th:if="${vehiculos != null and !vehiculos.isEmpty()}">
+    <thead>
+    <tr>
+        <th>Placa</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Color</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="v : ${vehiculos}">
+        <td th:text="${v.placa}"></td>
+        <td th:text="${v.marca}"></td>
+        <td th:text="${v.modelo}"></td>
+        <td th:text="${v.anio}"></td>
+        <td th:text="${v.color}"></td>
+    </tr>
+    </tbody>
 </table>
+
+<!-- Mensaje cuando no hay datos -->
+<p th:if="${vehiculos == null or vehiculos.isEmpty()}">
+    No hay vehículos registrados.
+</p>
+
+<br>
+
+<!-- Botón de navegación -->
+<a href="/" >Volver al inicio</a>
 
 </body>
 </html>
