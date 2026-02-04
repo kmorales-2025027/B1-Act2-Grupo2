@@ -5,8 +5,17 @@
     <title>Catálogo | Motos Pro</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px; }
-        .nav { margin-bottom: 30px; }
-        .nav a { color: #e74c3c; text-decoration: none; font-weight: bold; }
+        .nav { margin-bottom: 30px; display: flex; align-items: center; }
+        .nav a { text-decoration: none; font-weight: bold; }
+        .btn-back { color: #e74c3c; margin-right: 20px; }
+        .btn-perfil {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn-perfil:hover { background-color: #2980b9; color: white; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
         .card:hover { transform: translateY(-10px); }
@@ -18,37 +27,26 @@
     </style>
 </head>
 <body>
-    <div class="nav">
-        <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
+<div class="nav">
+    <a th:href="@{/}" class="btn-back">← Volver al Inicio</a>
+    <a th:href="@{/perfil-david}" class="btn-perfil">Ver Perfil del Desarrollador</a>
+</div>
+
+<h1>Nuestra Colección Premium</h1>
+
+<div class="grid">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1558981403-c5f91cbba527?w=500" alt="Moto">
+        <div class="info"><h3>Super Sport R1</h3><p>Velocidad pura en pista.</p><div class="price">$18,500</div></div>
     </div>
-    
-    <h1>Nuestra Colección Premium</h1>
-    
-    <div class="grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1558981403-c5f91cbba527?w=500" alt="Moto">
-            <div class="info"><h3>Super Sport R1</h3><p>Velocidad pura en pista.</p><div class="price">$18,500</div></div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=500" alt="Moto">
-            <div class="info"><h3>Street Custom</h3><p>Estilo urbano y elegante.</p><div class="price">$12,200</div></div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=500" alt="Moto">
-            <div class="info"><h3>Enduro Adventure</h3><p>Para terrenos difíciles.</p><div class="price">$14,900</div></div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?w=500" alt="Moto">
-            <div class="info"><h3>Classic Iron</h3><p>El poder de lo tradicional.</p><div class="price">$11,000</div></div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1614165933026-0750fcd503e8?w=500" alt="Moto">
-            <div class="info"><h3>Ninja Stealth</h3><p>Agilidad en cada curva.</p><div class="price">$16,300</div></div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?w=500" alt="Moto">
-            <div class="info"><h3>Harley Bobber</h3><p>Rugido inolvidable.</p><div class="price">$21,000</div></div>
-        </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=500" alt="Moto">
+        <div class="info"><h3>Street Custom</h3><p>Estilo urbano y elegante.</p><div class="price">$12,200</div></div>
     </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=500" alt="Moto">
+        <div class="info"><h3>Enduro Adventure</h3><p>Para terrenos difíciles.</p><div class="price">$14,900</div></div>
+    </div>
+</div>
 </body>
-</html> 
+</html>
