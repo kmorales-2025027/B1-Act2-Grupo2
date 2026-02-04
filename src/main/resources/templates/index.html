@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Concesionario Pro | Inicio</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: white; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .hero { text-align: center; border: 2px solid #e74c3c; padding: 50px; border-radius: 20px; background: #1a1a1a; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { color: #e74c3c; font-size: 3rem; margin-bottom: 10px; }
+        p { font-size: 1.2rem; color: #bdc3c7; }
+        .btn { background: #e74c3c; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 25px; transition: 0.3s; }
+        .btn:hover { background: #c0392b; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1 th:text="${titulo}">Bienvenido a Concesionario Pro</h1>
+        <p th:text="${descripcion}">Cargando la mejor selección de vehículos...</p>
+        <hr style="border: 0.5px solid #333; margin: 20px 0;">
+        <p>¿Listo para elegir tu próxima aventura?</p>
+        <a th:href="@{/catalogo}" class="btn">CATÁLOGO DAVID LACAYO</a>
+        <a th:href="@{/kevin}" class="btn">CATÁLOGO KEVIN MORALES</a>
+        <a th:href="@{/vehiculo}" class="btn">CATÁLOGO JAN CARLO RAMOS</a>
+        <a th:href="@{/vehiculos}" class="btn">CATÁLOGO ANGEL MUÑOZ</a>
+        <a th:href="@{/edder}" class="btn">CATÁLOGO EDDER GONZALEZ</a>
+    </div>
+</body>
+</html>

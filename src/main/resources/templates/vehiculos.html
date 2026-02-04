@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehículos</title>
+
+    <style>
+        .nav {
+            margin-bottom: 30px;
+        }
+        .nav a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .mensaje {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        img {
+            width: 600px;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
+</div>
+
+<h1>Lista de Vehículos</h1>
+
+<p class="mensaje" th:text="${mensaje}">Listado de vehículos</p>
+
+<p>Total de vehículos registrados:
+    <span th:text="${vehiculos.size()}">0</span>
+</p>
+
+<table border="1" th:if="${vehiculos != null and !vehiculos.isEmpty()}">
+    <thead>
+        <tr>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Color</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="v : ${vehiculos}">
+            <td th:text="${v.placa}"></td>
+            <td th:text="${v.marca}"></td>
+            <td th:text="${v.modelo}"></td>
+            <td th:text="${v.anio}"></td>
+            <td th:text="${v.color}"></td>
+            <td>
+                <img src="https://i.ytimg.com/vi/4Z04KFPrDoc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCIOXHPC1-z69mPg50Leflldi7w8A" alt="Civic black">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<div class="nav">
+    <a th:href="@{/angel}" class="btn btn-outline-secondary">Datos de Angel Muñoz</a>
+</div>
+
+</body>
+</html>
