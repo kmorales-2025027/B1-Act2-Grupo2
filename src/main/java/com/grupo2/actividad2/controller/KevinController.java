@@ -9,9 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class KevinController {
     @GetMapping("/kevin")
     public String paginaKevin(Model model) {
-        Vehiculo vehiculo = new Vehiculo("P 246 JDT", "Honda", "Civic Si", 1991, "Rojo");
+        Vehiculo vehiculo = new Vehiculo("P 594 CHG", "Honda", "Civic Si", 1991, "Rojo");
 
         model.addAttribute("vehiculo", vehiculo);
         return "KevinView";
+    }
+
+    @GetMapping("/kevin-info")
+    public String sobreMi() {
+        return "KevinDatos";
     }
 }

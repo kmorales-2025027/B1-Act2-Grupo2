@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Vista de Vehículos</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; padding: 40px; font-weight: bold; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #e74c3c; text-decoration: none; font-weight: bold; }
+        p { text-indent: 80px; }
+        img { width: 600px; height: 400px; object-fit: contain; }
+    </style>
 </head>
 <body>
+<div class="nav">
+    <a th:href="@{/}" class="btn btn-outline-secondary">← Volver al Inicio</a>
+</div>
 
     <h1>Vista de Vehículos</h1>
 
     <h2>Información del Vehículo</h2>
+
+    <img src="https://www.toyota.com.gt/hubfs/Colores-Corolla-2020-rojo.jpg" alt="Corolla">
 
     <p>
         <strong>Marca:</strong>
