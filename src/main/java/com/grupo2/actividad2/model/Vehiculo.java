@@ -1,11 +1,11 @@
 package com.grupo2.actividad2.model;
 
 public class Vehiculo {
-    String placa;
-    String marca;
-    String modelo;
-    int anio;
-    String color;
+    private String placa;
+    private String marca;
+    private String modelo;
+    private int anio;
+    private String color;
 
     public Vehiculo() {
     }
