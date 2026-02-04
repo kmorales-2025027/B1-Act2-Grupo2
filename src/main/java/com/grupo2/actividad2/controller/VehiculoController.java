@@ -10,8 +10,7 @@ import java.util.List;
 
 @Controller
 public class VehiculoController {
-
-    // Vista principal de vehículos (la tuya)
+    // Jan Carlo Ramos
     @GetMapping("/vehiculo")
     public String vehiculo(Model model) {
         Vehiculo v = new Vehiculo("P123ABC", "Toyota", "Corolla", 2022, "Rojo");
@@ -19,7 +18,7 @@ public class VehiculoController {
         return "vista-josep";
     }
 
-    // Vista con lista de vehículos (la del grupo)
+    //Angel Muñoz
     @GetMapping("/vehiculos")
     public String mostrarVehiculos(Model model) {
         List<Vehiculo> lista = new ArrayList<>();
@@ -34,5 +33,10 @@ public class VehiculoController {
     @GetMapping("/datosPersonales")
     public String datosPersonales() {
         return "datosPersonales";
+    }
+
+    @GetMapping("/angel")
+    public String angel() {
+        return "DatosAngel";
     }
 }
